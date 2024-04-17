@@ -30,8 +30,8 @@ To use the API collection, follow these steps for each request:
 
 ### Sign-in Copy
 Authenticate to the system using your credentials:
-```plaintext'''
 
+'plaintex'
 POST /auth/signappin
 Headers: Authorization: PS-Auth key={{Key}}; runas=addressgrp
 
