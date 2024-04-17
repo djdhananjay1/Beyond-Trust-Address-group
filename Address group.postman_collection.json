@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "c00f4c3d-4ba1-4760-bdb1-03043fc8f9e2",
+		"name": "Address group",
+		"description": "StartFragment[Address Groups: Password Safe API (beyondtrust.com)](https://www.beyondtrust.com/docs/beyondinsight-password-safe/ps/api/beyond-insight/address-groups.htm)EndFragment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21724101"
+	},
+	"item": [
+		{
+			"name": "sign-in Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "PS-Auth key={{Key}}; runas=addressgrp",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/auth/signappin",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"auth",
+						"signappin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Address ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://192.168.94.131//BeyondTrust/api/public/v3/Addressgroups",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"94",
+						"131"
+					],
+					"path": [
+						"",
+						"BeyondTrust",
+						"api",
+						"public",
+						"v3",
+						"Addressgroups"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Address Group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    Name: \"Iamapiaddressgroup\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.94.131//BeyondTrust/api/public/v3/AddressGroups/",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"94",
+						"131"
+					],
+					"path": [
+						"",
+						"BeyondTrust",
+						"api",
+						"public",
+						"v3",
+						"AddressGroups",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post a entry in Address group",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    Type: 4,\r\n    Value: \"10.1.1.2\",\r\n    Omit: true\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://192.168.94.131//BeyondTrust/api/public/v3/AddressGroups/10005/Addresses",
+					"protocol": "https",
+					"host": [
+						"192",
+						"168",
+						"94",
+						"131"
+					],
+					"path": [
+						"",
+						"BeyondTrust",
+						"api",
+						"public",
+						"v3",
+						"AddressGroups",
+						"10005",
+						"Addresses"
+					]
+				},
+				"description": "Select body as per need"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Key",
+			"value": "ac3efe210a68866eaca1662506918b6cc48998c1ce7d765944bffcd485b8071a9be90292bf14c0ddc8859f2cdc3be77126d83e6040fbb91d72ce1e283e60a35a",
+			"type": "string"
+		},
+		{
+			"key": "url",
+			"value": "https://192.168.94.131/BeyondTrust/api/public/v3",
+			"type": "string"
+		}
+	]
+}
