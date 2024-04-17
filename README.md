@@ -51,7 +51,7 @@ Body:
     "Name": "Iamapiaddressgroup"
 }
 ```
-###Post an Entry in Address Group
+### Post an Entry in Address Group
 Add an entry to an existing address group:
 ```
 POST /BeyondTrust/api/public/v3/AddressGroups/10005/Addresses
@@ -64,18 +64,18 @@ Body:
     "Omit": true
 }
 ```
-##Configuration
+## Configuration
 Update the variables in Postman:
 ```
 Key: Your API key.
 url: Your API endpoint URL (e.g., https://bipsurl/BeyondTrust/api/public/v3).
 ```
-Contributing
+## Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 To contribute:
 
-License
+### License
 Distributed under the MIT License. See LICENSE for more information.
 
 Project Link: https://github.com/yourusername/your-repository-name
