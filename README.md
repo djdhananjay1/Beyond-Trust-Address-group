@@ -31,31 +31,25 @@ To use the API collection, follow these steps for each request:
 ### Sign-in Copy
 Authenticate to the system using your credentials:
 
-''plaintext''
+'''plaintext'''
 POST /auth/signappin
 Headers: Authorization: PS-Auth key={{Key}}; runas=addressgrp
 
-## Get Address ID
+### Get Address ID
 Fetch the list of address groups:
-
-plaintext
-Copy code
 GET /BeyondTrust/api/public/v3/Addressgroups
+
+
 Post Address Group
 Create a new address group:
-
-json
-Copy code
 POST /BeyondTrust/api/public/v3/AddressGroups/
 Body: 
 {
     "Name": "Iamapiaddressgroup"
 }
+
 Post an Entry in Address Group
 Add an entry to an existing address group:
-
-json
-Copy code
 POST /BeyondTrust/api/public/v3/AddressGroups/10005/Addresses
 Body:
 {
@@ -67,7 +61,8 @@ Configuration
 Update the variables in Postman:
 
 Key: Your API key.
-url: Your API endpoint URL (e.g., https://192.168.94.131/BeyondTrust/api/public/v3).
+url: Your API endpoint URL (e.g., https://bipsurl/BeyondTrust/api/public/v3).
+
 Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
