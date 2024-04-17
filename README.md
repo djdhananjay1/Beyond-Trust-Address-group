@@ -30,53 +30,52 @@ To use the API collection, follow these steps for each request:
 
 ### Sign-in Copy
 Authenticate to the system using your credentials:
-
-'''plaintext'''
+``` 
 POST /auth/signappin
 Headers: Authorization: PS-Auth key={{Key}}; runas=addressgrp
-
+```
 ### Get Address ID
 Fetch the list of address groups:
+```
 GET /BeyondTrust/api/public/v3/Addressgroups
+```
 
-
-Post Address Group
+### Post Address Group
 Create a new address group:
+```
 POST /BeyondTrust/api/public/v3/AddressGroups/
+```
+```
 Body: 
 {
     "Name": "Iamapiaddressgroup"
 }
-
-Post an Entry in Address Group
+```
+###Post an Entry in Address Group
 Add an entry to an existing address group:
+```
 POST /BeyondTrust/api/public/v3/AddressGroups/10005/Addresses
+```
+```
 Body:
 {
     "Type": 4,
     "Value": "10.1.1.2",
     "Omit": true
 }
-Configuration
+```
+##Configuration
 Update the variables in Postman:
-
+```
 Key: Your API key.
 url: Your API endpoint URL (e.g., https://bipsurl/BeyondTrust/api/public/v3).
-
+```
 Contributing
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
 To contribute:
 
-Fork the Project
-Create your Feature Branch (git checkout -b feature/AmazingFeature)
-Commit your Changes (git commit -m 'Add some AmazingFeature')
-Push to the Branch (git push origin feature/AmazingFeature)
-Open a Pull Request
 License
 Distributed under the MIT License. See LICENSE for more information.
-
-Contact
-Your Name - your-email@example.com
 
 Project Link: https://github.com/yourusername/your-repository-name
